@@ -2,6 +2,10 @@ package 'tree' do
   action :install
 end
 
+package 'nano'
+
+package 'emacs'
+
 package 'git'
 
 package 'ntp'
