@@ -10,9 +10,10 @@ package 'git'
 
 package 'ntp'
 
-file '/etc/motd' do
-  content 'This server is the property of Yogesh'
-  action :create
-  owner 'root'
-  group 'root'
+node['ipaddress']
+node['memory']['total']
+
+template '/etc/motd' do
+  source 'motd.erb'
+  action :create 
 end
