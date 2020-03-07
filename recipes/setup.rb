@@ -15,5 +15,8 @@ node['memory']['total']
 
 template '/etc/motd' do
   source 'motd.erb'
+  variables(
+    :name => 'yogesh'
+  )
   action :create 
 end
